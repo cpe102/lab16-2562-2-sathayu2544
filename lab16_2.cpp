@@ -1,13 +1,12 @@
 #include <iostream>
 using namespace std;
 
-char myString(char *x, int y)
+char myString(char *&x, int y)
 {
-	char *z = new char;
+	 	x = new char[y];
 	for (int i = 0; i < y; i++)
 	{
-		z[i] = 'A' + i;
-		cout << z[i];
+		x[i] = 'A' + i;
 	}
 }
 int main()
